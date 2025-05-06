@@ -9,16 +9,13 @@ dotenv.config();
 
 async function main() {
   const client = new MezonClient(process.env.APPLICATION_TOKEN);
+  await client.login();
   // Example usage in your main function
   const gomoku = new Gomoku(client); // Create a new Gomoku instance
   const aiClient = new GeminiClient();
   const wordChain = new WordChain(aiClient, client);
 
-
-  await client.authenticate();
-
-  client.on("channel_message", async (event) => {
-    console.log("event", event);
+  client.onChannelMessage(async (event) => {
     if (typeof event.content.t !== 'string') {
       return;
     }

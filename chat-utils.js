@@ -1,4 +1,5 @@
 function sendMessage(client, event, response, ignoreRef) {
+    const channel = client.channels.get(event?.channel_id);
     const ref = ignoreRef ? [] :
         [
             {
@@ -15,16 +16,18 @@ function sendMessage(client, event, response, ignoreRef) {
             },
         ]
 
-    client.sendMessage(
-        event?.clan_id,
-        event?.channel_id,
-        2,
-        event?.is_public,
-        response,
-        [],
-        [],
-        ref
-    );
+    if (!ref) {
+        channel.send(
+            response,
+        )
+        return;
+    }
+    const comingMessage = channel.messages.get(event?.message_id);
+    if (comingMessage) {
+        comingMessage.reply(
+            response
+        )
+    }
 }
 
 function sendMessageString(client, event, message, isMarkdown, ignoreRef) {

@@ -2969,10 +2969,10 @@ merge-stream@^2.0.0:
   resolved "https://registry.npmjs.org/merge-stream/-/merge-stream-2.0.0.tgz"
   integrity sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==
 
-mezon-sdk@^2.7.61:
-  version "2.7.64"
-  resolved "https://registry.npmjs.org/mezon-sdk/-/mezon-sdk-2.7.64.tgz"
-  integrity sha512-JfExYI41P7OUL9hm6JwWG8/F1kuZ+bkyU0XD9AATFFm99GEHpqDsWhAfPWSgjmyhiC8I6Kx6Pz/pFRHCIs3kog==
+mezon-sdk@^2.7.87:
+  version "2.7.87"
+  resolved "https://registry.yarnpkg.com/mezon-sdk/-/mezon-sdk-2.7.87.tgz#e79edb89abca69d2ce26339b493435b7e8b7ca1a"
+  integrity sha512-1MYUNSos2HvNE5Kuy4aOe/84RPC70pe/o3WIenegpYHvIw/2sE3jmFXDDhv/q0vYp+jieT4ymKSYBQimWWv7yA==
   dependencies:
     "@types/ws" "^8.5.12"
     base64-arraybuffer "^1.0.2"
